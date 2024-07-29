@@ -6,7 +6,7 @@ import React, {
   useEffect,
 } from 'react';
 import {Appearance, ColorSchemeName} from 'react-native';
-import { ThemeColors, ThemeType } from '../types/Theme';
+import {ThemeColors, ThemeType} from '../types/Theme';
 
 type ThemeContextType = {
   theme: ThemeColors;
