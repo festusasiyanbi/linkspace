@@ -8,7 +8,6 @@ import {
 } from '@fortawesome/free-regular-svg-icons';
 import {faCircleCheck} from '@fortawesome/free-solid-svg-icons';
 import {faEllipsis} from '@fortawesome/free-solid-svg-icons/faEllipsis';
-
 import useFetchUserById from '../hooks/useFetchUserById';
 import {Post} from '../types/Post';
 import {useTheme} from '../context/ThemeProvider';

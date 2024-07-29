@@ -2,7 +2,7 @@ import {View, ScrollView, Image, StyleSheet} from 'react-native';
 import React from 'react';
 import {UserStory} from '../types/Story';
 import CustomText from '../utils/CustomText';
-import { useTheme } from '../context/ThemeProvider';
+import {useTheme} from '../context/ThemeProvider';
 
 const stories: UserStory[] = [
   {
@@ -49,7 +49,7 @@ export default function Story({isNewStory = true}: any) {
             style={[
               styles.storyImageView,
               isNewStory && styles.storyBorderGradient,
-              {borderColor: theme.primary}
+              {borderColor: theme.primary},
             ]}>
             <Image source={story.userAvatar} style={styles.image} />
           </View>
