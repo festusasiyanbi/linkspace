@@ -9,7 +9,7 @@ const Header = () => {
   const navigate = useCustomNavigation();
   return (
     <View style={styles.container}>
-      <Text style={styles.logoTxt}>Connectify</Text>
+      <Text style={styles.logoTxt}>LinkSpace</Text>
       <View style={styles.notificationView}>
         <View style={styles.notifierView}>
           <CustomText> {''} </CustomText>
