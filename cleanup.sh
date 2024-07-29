@@ -1,0 +1,1 @@
+cd android && ./gradlew clean && cd .. && cd ios && pod install && cd .. && npm start --cache
