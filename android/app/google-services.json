@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "251587891426",
+    "project_id": "linkspace-b90f4",
+    "storage_bucket": "linkspace-b90f4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:251587891426:android:de20575a000045fba80ebb",
+        "android_client_info": {
+          "package_name": "com.linkspace"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFS2l0FtITdK7kFzc8jshmvRvKui_wnx4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -4,6 +4,7 @@
  *
  * @format
  */
+
 import React from 'react';
 import {ThemeProvider} from './src/context/ThemeProvider';
 import {NavigationContainer} from '@react-navigation/native';
