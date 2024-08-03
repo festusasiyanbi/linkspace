@@ -18,6 +18,9 @@ target 'linkspace' do
   config = use_native_modules!
   use_frameworks! :linkage => :static
   $RNFirebaseAsStaticFramework = true
+
+  pod 'RNReanimated', :path => '../node_modules/react-native-reanimated'
+
   use_react_native!(
     :path => config[:reactNativePath],
     # An absolute path to your application root.
@@ -37,5 +40,7 @@ target 'linkspace' do
       :mac_catalyst_enabled => false,
       # :ccache_enabled => true
     )
+    pod 'Permission-PhotoLibrary', :path => "../node_modules/react-native-permissions/ios/PhotoLibrary"
+    pod 'Permission-Camera', :path => "../node_modules/react-native-permissions/ios/Camera"
   end
 end

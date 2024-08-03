@@ -204,7 +204,7 @@ const SignUp = () => {
                 text2={toastProps?.text2}
               />
             )} */}
-            <CustomText style={styles.logoTxt}>Connectify</CustomText>
+            <CustomText style={styles.logoTxt}>LinkSpace</CustomText>
             <View style={styles.formContainer}>
               <TextInput
                 style={[
@@ -213,7 +213,7 @@ const SignUp = () => {
                 ]}
                 placeholder="Full Name"
                 value={signUpForm.fullName}
-                onChangeText={text =>
+                onChangeText={(text: string) =>
                   setSignUpForm({...signUpForm, fullName: text})
                 }
                 onFocus={() => handleFocus('FullName')}

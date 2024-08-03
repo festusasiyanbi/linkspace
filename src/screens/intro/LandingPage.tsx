@@ -21,7 +21,7 @@ const LandingPage = () => {
           source={require('../../assets/images/authImage.png')}
           style={styles.backgroundImageStyle}>
           <View style={styles.logoView}>
-            <Text style={styles.logoTxt}>Connectify</Text>
+            <Text style={styles.logoTxt}>LinkSpace</Text>
           </View>
           <View style={styles.operationBtnWrapper}>
             <View style={styles.operationBtnView}>

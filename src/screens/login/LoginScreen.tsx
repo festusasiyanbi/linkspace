@@ -131,7 +131,7 @@ const LoginScreen = () => {
                 <Icon name={faTimes} size={20} color="#fff" />
               </CustomText>
             </TouchableOpacity>
-            <CustomText style={styles.logoTxt}>Connectify</CustomText>
+            <CustomText style={styles.logoTxt}>LinkSpace</CustomText>
             <View style={styles.formContainer}>
               <TextInput
                 style={[
