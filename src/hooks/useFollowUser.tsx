@@ -28,26 +28,23 @@ const useFollowUser = ({userId, userToFollowId}: useFollowUserProp) => {
       const userFollowDocSnapshot = await userFollowDocRef.get();
 
       if (!userDocSnapshot.exists) {
-        console.error('No user found');
         setError('No user found');
         setLoading(false);
         return;
       }
 
       if (!userFollowDocSnapshot.exists) {
-        console.error('User to follow not found.');
         setError('User to follow not found.');
         setLoading(false);
         return;
       }
 
       const currentUser = userDocSnapshot.data() as User;
-      const followUser = userFollowDocSnapshot.data() as User;
 
       await userFollowDocRef.update({
         followers: arrayUnion(currentUser.userId),
       });
-      await userDocRef.update({following: arrayUnion(followUser.userId)});
+      await userDocRef.update({following: arrayUnion(userToFollowId)});
 
       setIsFollower(true);
       refetchCurrentUserData();
@@ -71,24 +68,23 @@ const useFollowUser = ({userId, userToFollowId}: useFollowUserProp) => {
       const userFollowDocSnapshot = await userFollowDocRef.get();
 
       if (!userDocSnapshot.exists) {
-        console.error('No user found');
         setError('No user found');
+        setLoading(false);
         return;
       }
 
       if (!userFollowDocSnapshot.exists) {
-        console.error('User to unfollow not found.');
         setError('User to unfollow not found.');
+        setLoading(false);
         return;
       }
 
       const currentUser = userDocSnapshot.data() as User;
-      const followUser = userFollowDocSnapshot.data() as User;
 
       await userFollowDocRef.update({
         followers: arrayRemove(currentUser.userId),
       });
-      await userDocRef.update({following: arrayRemove(followUser.userId)});
+      await userDocRef.update({following: arrayRemove(userToFollowId)});
 
       setIsFollower(false);
       refetchCurrentUserData();
@@ -102,11 +98,7 @@ const useFollowUser = ({userId, userToFollowId}: useFollowUserProp) => {
   }, [userId, userToFollowId, refetchCurrentUserData, refetchFollowUserData]);
 
   useEffect(() => {
-    if (
-      currentUserData &&
-      currentUserData.following &&
-      currentUserData.following.includes(userToFollowId)
-    ) {
+    if (currentUserData?.following?.includes(userToFollowId)) {
       setIsFollower(true);
     } else {
       setIsFollower(false);

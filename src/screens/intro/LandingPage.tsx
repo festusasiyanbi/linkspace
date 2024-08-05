@@ -7,8 +7,8 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import HomeScreen from '../home/HomeScreen';
 import useCustomNavigation from '../../hooks/useCustomNavigation';
+import LoginScreen from '../login/LoginScreen';
 
 const LandingPage = () => {
   const navigate = useCustomNavigation();
@@ -46,7 +46,7 @@ const LandingPage = () => {
       ) : (
         <View>
           {' '}
-          <HomeScreen />
+          <LoginScreen />
         </View>
       )}
     </View>
